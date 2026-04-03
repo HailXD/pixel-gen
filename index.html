@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RGBA Pixel Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="panel controls">
+      <div class="intro">
+        <p class="eyebrow">PNG Generator</p>
+        <h1>Make a solid RGBA image at any size</h1>
+        <p class="subtle">Set width, height, and color. The preview updates instantly and the download saves an exact PNG.</p>
+      </div>
+
+      <form id="generator-form" class="form">
+        <label>
+          <span>Width</span>
+          <input id="width" name="width" type="number" min="1" step="1" value="256" required>
+        </label>
+
+        <label>
+          <span>Height</span>
+          <input id="height" name="height" type="number" min="1" step="1" value="256" required>
+        </label>
+
+        <label>
+          <span>Red</span>
+          <input id="red" name="red" type="number" min="0" max="255" step="1" value="255" required>
+        </label>
+
+        <label>
+          <span>Green</span>
+          <input id="green" name="green" type="number" min="0" max="255" step="1" value="0" required>
+        </label>
+
+        <label>
+          <span>Blue</span>
+          <input id="blue" name="blue" type="number" min="0" max="255" step="1" value="0" required>
+        </label>
+
+        <label>
+          <span>Alpha</span>
+          <input id="alpha" name="alpha" type="number" min="0" max="255" step="1" value="255" required>
+        </label>
+
+        <div class="actions">
+          <button type="submit">Download PNG</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel preview-panel">
+      <div class="preview-head">
+        <h2>Preview</h2>
+        <p id="meta" class="meta"></p>
+      </div>
+
+      <div class="preview-frame">
+        <canvas id="preview" width="256" height="256" aria-label="RGBA image preview"></canvas>
+      </div>
+
+      <p id="rgba-text" class="rgba-text"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
