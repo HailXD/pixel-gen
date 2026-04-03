@@ -21,9 +21,7 @@ body {
   min-height: 100vh;
   font-family: "Segoe UI", sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at top, rgba(246, 196, 83, 0.12), transparent 28%),
-    var(--bg);
+  background: var(--bg);
 }
 
 .app {
